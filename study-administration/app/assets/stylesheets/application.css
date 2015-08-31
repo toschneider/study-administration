@@ -1,15 +1,113 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*Tag for everything on the page, change font style here for whole page*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*Spawned content should be below navigation bars, change margin here*/
+.content {
+  margin-top: 80px;
+}
+
+/*Contains navigation and login fields, is fixed so that it will stay visible when scrolling*/
+.bar-container {
+    position:fixed;
+    background-color: #444;
+    top: 0;
+    padding: 0;
+    margin-top: 0%;
+    margin-right: 0%;
+    width: 100%;
+    height: 25px;
+}
+
+/*Position of login fields*/
+.login {
+    position:absolute;
+    top: 0;
+    padding: 0;
+    margin-top: 0%;
+    margin-left: 80%;
+    width: 100%;
+}
+
+.login ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+/*Outward appearance of login items concerning everything aside from color*/
+.login li{
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: -4px;
+  width: 10%;
+  text-align: center;
+}
+
+/*Color of login items*/
+.login a {
+  text-decoration: none;
+  color: #088A4B;
+  display: block;
+  transition: .3s background-color;
+}
+
+/*Color of login item background when hovered*/
+.login a:hover {
+  background-color: #005f5f;
+}
+
+/*Position of navigation fields*/
+.nav {
+  position:absolute;
+  top: 0;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+}
+
+/*Outward appearance of navigation items concerning everything aside from color*/
+.nav li {
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: -4px;
+  width: 10%;
+  text-align: center;
+}
+ 
+ /*Color of navigation items*/
+.nav a {
+  text-decoration: none;
+  color: #088A4B;
+  display: block;
+  transition: .3s background-color;
+}
+
+/*Color of navigation item background when hovered*/
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+ /*Color of active navigation item*/
+.nav a.active {
+  background-color: #0CCD70;
+  color: #444;
+  cursor: pointer;
+}
+ 
+}

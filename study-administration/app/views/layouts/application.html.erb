@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<header>
+	<div class="bar-container">
+	<!--Bar containing the important navigation items-->
+	<div class="nav">
+      <ul>     
+        <li class="home"><a class="active" href="#">Home</a></li>
+        <li class="menue-1"><a href="#">menue-1</a></li>
+        <li class="menue-2"><a href="#">menue-2</a></li>
+        <li class="menue-3"><a href="#">menue-3</a></li>
+        <li class="menue-4"><a href="#">menue-4</a></li>
+      </ul>
+    </div>
+    <!--Bar containing the login and signup buttons-->
+    <div class="login">
+      <ul>     
+        <li class="login_field"><a href="#">LogIn</a></li>
+        <li class="signup"><a href="#">SignUp</a></li>
+      </ul>
+    </div>
+    </div>
+ </header>
+ <center>
+ <!--Specific views are spawned here-->
+ 	<div class="content">
+		<%= yield %>
+	</div>
+</center>
 </body>
 </html>
