@@ -10,15 +10,13 @@ post 'logout' => 'user_sessions#destroy', :as => :logout
 
 
 
- #  get 'user_sessions/new'
+#get 'user_sessions/new'
 
- # get 'user_sessions/create'
+#get 'user_sessions/create'
 
-  #get 'user_sessions/destroy'
+#get 'user_sessions/destroy'
 
- # resources :users
-
- # root to: 'home#home'
+root to: 'home#home'
 
 
 # ----------------------------------------
