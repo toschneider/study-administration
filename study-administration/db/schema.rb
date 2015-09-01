@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
@@ -55,4 +56,15 @@ ActiveRecord::Schema.define(version: 20150901081914) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 >>>>>>> 5cce0600d64e181b1660dbd1f5b7bc1bc9cd9bcc
+=======
+ActiveRecord::Schema.define(version: 20150901092434) do
+
+  create_table "blocks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "gesamtects"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> 7130e5aa2b34ff1134a571e6226e71a4e071498e
 end

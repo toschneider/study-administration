@@ -2,7 +2,11 @@
 
 Rails.application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
   resources :events
+=======
+  resources :blocks
+>>>>>>> 7130e5aa2b34ff1134a571e6226e71a4e071498e
 
   root to: 'home#home'
 =======
