@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Gesamtects</th>
       <th>Credits min</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
     <% @blocks.each do |block| %>
       <tr>
         <td><%= block.name %></td>
-        <td><%= block.gesamtects %></td>
         <td><%= block.credits_min %></td>
         <td><%= link_to 'Show', block %></td>
         <td><%= link_to 'Edit', edit_block_path(block) %></td>
