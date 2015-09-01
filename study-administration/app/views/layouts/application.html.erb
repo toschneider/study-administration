@@ -7,8 +7,53 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+	<div class="bar-container">
+	<!--Bar containing the important navigation items-->
+	<div class="nav">
+      <ul>     
+        <li class="topmenu"><a class="active" href="#">Home</a></li>
+        <li class="topmenu"><a href="#">menue-1</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-2</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-3</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-4</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--Bar containing the login and signup buttons-->
+    <div class="login">
+      <ul>     
+        <li class="login_field"><a href="#">LogIn</a></li>
+        <li class="signup"><a href="#">SignUp</a></li>
+      </ul>
+    </div>
+    </div>
+ </header>
+ <center> 
 
-<%= yield %>
-
+ <!--Specific views are spawned here-->
+ 	<div class="content">
+		<%= yield %>
+	</div>
+</center>
 </body>
 </html>
