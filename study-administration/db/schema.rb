@@ -11,9 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+=======
+ActiveRecord::Schema.define(version: 20150901112356) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "identifier"
+    t.string   "title"
+    t.string   "description"
+    t.string   "prof"
+    t.integer  "credits"
+    t.integer  "sws"
+    t.string   "cycle"
+    t.string   "next"
+    t.string   "exam_type"
+    t.string   "condition"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+>>>>>>> 5d41d2b5b73c7c4ea6aadee65c7af4873d3dde6c
 
 end
