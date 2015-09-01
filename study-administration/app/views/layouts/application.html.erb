@@ -50,15 +50,6 @@
     </div>
     </div>
  </header>
- <center> 
-
-<<<<<<< HEAD
- <!--Specific views are spawned here-->
- 	<div class="content">
-		<%= yield %>
-	</div>
-</center>
-=======
 <!-- added navigation links and flash messages -->
 
 <div id="nav">
@@ -74,9 +65,8 @@
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
-
+<center>
 <%= yield %>
-
->>>>>>> 5cce0600d64e181b1660dbd1f5b7bc1bc9cd9bcc
+</center>
 </body>
 </html>

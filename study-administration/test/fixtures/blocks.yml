@@ -2,16 +2,12 @@
 
 one:
   name: MyString
-<<<<<<< HEAD
   gesamtects: 1
-
-two:
-  name: MyString
-  gesamtects: 1
-=======
   credits_min: 1
 
 two:
   name: MyString
+  gesamtects: 1
   credits_min: 1
->>>>>>> d62b09217e1b6234e79f306f41a787e393fc09b9
+
+

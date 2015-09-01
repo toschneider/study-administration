@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150901112356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-=======
-ActiveRecord::Schema.define(version: 20150901112356) do
+
+  create_table "blocks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "gesamtects"
+    t.integer  "credits_min"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "identifier"
@@ -37,14 +38,6 @@ ActiveRecord::Schema.define(version: 20150901112356) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
->>>>>>> 5d41d2b5b73c7c4ea6aadee65c7af4873d3dde6c
-
-=======
-ActiveRecord::Schema.define(version: 0) do
-
->>>>>>> 9290d89d0accae22b05b4c2ba46e75db8e2ab51e
-=======
-ActiveRecord::Schema.define(version: 20150901081914) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
@@ -54,29 +47,6 @@ ActiveRecord::Schema.define(version: 20150901081914) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
->>>>>>> 5cce0600d64e181b1660dbd1f5b7bc1bc9cd9bcc
-=======
-ActiveRecord::Schema.define(version: 20150901092434) do
-
-  create_table "blocks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "gesamtects"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
->>>>>>> 7130e5aa2b34ff1134a571e6226e71a4e071498e
-=======
-ActiveRecord::Schema.define(version: 20150901112010) do
-
-  create_table "blocks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "credits_min"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
->>>>>>> d62b09217e1b6234e79f306f41a787e393fc09b9
 end
