@@ -15,7 +15,7 @@
 	<div class="nav">
       <ul>     
         <li class="topmenu"><a class="active" href="#">Home</a></li>
-        <li class="topmenu"><a href="#">menue-1</a>
+        <li class="topmenu"><a href="events">Veranstaltungen</a>
           <ul>
             <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
             <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
@@ -44,29 +44,31 @@
     <!--Bar containing the login and signup buttons-->
     <div class="login">
       <ul>     
-        <li class="login_field"><a href="#">LogIn</a></li>
-        <li class="signup"><a href="#">SignUp</a></li>
+        <% if current_user %>
+          <li class="login_field"><a href="edit_user_path(current_user.id)">LogIn</a></li>
+          <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
+          <%= link_to "Logout", :logout, method: :post %>
+        <% else %>
+          <li class="signup"><a href="/users/new">SignUp</a></li>
+          <!--alternative way for button-->
+          <!--<%= link_to "Register", new_user_path %> -->
+          <li class="login_field"><a href="/login">LogIn</a></li>
+          <!--alternative way for button-->
+          <!-- <%= link_to "Login", :login %> -->
+        <% end %>
+        <div>
+          <p id="notice"><%= flash[:notice] %></p>
+          <p id="alert"><%= flash[:alert] %></p>
+        </div>
       </ul>
     </div>
     </div>
  </header>
 <!-- added navigation links and flash messages -->
-
-<div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
-  <div>
-    <p id="notice"><%= flash[:notice] %></p>
-    <p id="alert"><%= flash[:alert] %></p>
-  </div>
+<div class="content">
 <center>
 <%= yield %>
 </center>
+</div>
 </body>
 </html>

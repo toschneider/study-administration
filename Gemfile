@@ -45,6 +45,7 @@ group :development, :test do
   gem 'spring'
 
   # Bootstrap gem for better looking css
-  gem "twitter-bootstrap-rails"
+  gem 'twitter-bootstrap-rails'
+  gem 'bootstrap_form'
 end
 

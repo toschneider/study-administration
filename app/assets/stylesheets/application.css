@@ -1,5 +1,6 @@
 /*We are using bootstrap*/
 *= require bootstrap_and_overrides
+ */
 
 /*Tag for everything on the page, change font style here for whole page*/
 body {
@@ -93,8 +94,9 @@ body {
   height: 40px;
   display: inline-block;
   margin-right: -4px;
-  width: 10%;
+  width: 12%;
   text-align: center;
+  white-space:nowrap;
   /*float:left;*/
 }
 
@@ -120,7 +122,7 @@ body {
 /* Layout of menu texts */
 .topmenu a {
   float:left;
-  width:110px;
+  width:80%;
   text-align:center;
   text-decoration: none;
   color: #088A4B;
@@ -147,7 +149,7 @@ body {
 /*Layout of submenu texts*/
 .submenu a{
   font-size:12px;
-  width:110px;
+  width:100;
   position:relative;
   clear:both; /* special IE6 */
 }
