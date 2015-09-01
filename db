@@ -1,0 +1,3 @@
+export POSTGRES_HOST="project2"
+export POSTGRES_USERNAME="postgres"
+export POSTGRES_PASSWORD="#dbp2015!"
