@@ -74,13 +74,15 @@ body {
 
 .nav ul {
   list-style: none;
+  list-style-type:none;
+  list-style-image:none;
   background-color: #444;
   padding: 0;
   margin: 0;
 }
 
 /*Outward appearance of navigation items concerning everything aside from color*/
-.nav li {
+.nav li.topmenu{
   font-size: 1.2em;
   line-height: 40px;
   height: 40px;
@@ -88,19 +90,21 @@ body {
   margin-right: -4px;
   width: 10%;
   text-align: center;
+  /*float:left;*/
 }
  
  /*Color of navigation items*/
-.nav a {
+/*.nav a {
   text-decoration: none;
   color: #088A4B;
   display: block;
   transition: .3s background-color;
-}
+}*/
 
 /*Color of navigation item background when hovered*/
-.nav a:hover {
-  background-color: #005f5f;
+.nav a:hover, .topmenu.on a {
+  color:#4C4C4C;
+  background-color:#005f5f !important;
 }
  
  /*Color of active navigation item*/
@@ -109,5 +113,45 @@ body {
   color: #444;
   cursor: pointer;
 }
- 
+
+
+.topmenu:hover ul {
+  display:block;  
+  z-index:500;
+}
+
+
+.topmenu a {
+  float:left;
+  width:110px;
+  text-align:center;
+  text-decoration: none;
+  color: #088A4B;
+  display: block;
+  transition: .3s background-color;
+}
+
+.topmenu ul{
+  display:none;
+}
+
+.topmenu a, .submenu a{
+  padding:2px 5px;
+  /*border-collapse:collapse; /*what is this stuff?*/
+  color:#088A4B;
+  font-weight:bold;
+  text-decoration:none;
+  background-color:#444;
+  margin:0;  
+}
+
+.submenu a{
+  font-size:12px;
+  width:110px;
+  position:relative;
+  clear:both; /* special IE6 */
+}
+
+
+
 }
