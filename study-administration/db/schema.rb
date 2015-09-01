@@ -13,6 +13,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
@@ -40,4 +41,18 @@ ActiveRecord::Schema.define(version: 20150901112356) do
 ActiveRecord::Schema.define(version: 0) do
 
 >>>>>>> 9290d89d0accae22b05b4c2ba46e75db8e2ab51e
+=======
+ActiveRecord::Schema.define(version: 20150901081914) do
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+>>>>>>> 5cce0600d64e181b1660dbd1f5b7bc1bc9cd9bcc
 end
