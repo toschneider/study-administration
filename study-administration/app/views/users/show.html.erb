@@ -1,13 +1,11 @@
+<!-- Profile usable for admins -->
+<head>Profile</head>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Crypted password:</strong>
-  <%= @user.crypted_password %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
