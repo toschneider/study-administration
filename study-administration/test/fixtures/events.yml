@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  title: MyString
+  description: MyString
+  prof: MyString
+  credits: 1
+  sws: 1
+  cycle: 1
+  next: MyString
+  exam_type: MyString
+  condition: MyString
+
+two:
+  id: MyString
+  title: MyString
+  description: MyString
+  prof: MyString
+  credits: 1
+  sws: 1
+  cycle: 1
+  next: MyString
+  exam_type: MyString
+  condition: MyString

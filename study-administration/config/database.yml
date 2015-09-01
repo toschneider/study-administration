@@ -9,10 +9,11 @@ default: &default
   host: "<%= ENV['POSTGRES_HOST'] %>"
   username: "<%= ENV['POSTGRES_USERNAME'] %>"
   password: "<%= ENV['POSTGRES_PASSWORD'] %>"
+  port: 5432
 
 development:
   <<: *default
-  database: studmin_development
+  database: dcs9atf3emlbiv
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
