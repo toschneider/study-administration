@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Id</th>
+      <th>Identifier</th>
       <th>Title</th>
       <th>Description</th>
       <th>Prof</th>
@@ -23,6 +24,7 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.id %></td>
+        <td><%= event.identifier %></td>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.prof %></td>

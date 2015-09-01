@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br>
-    <%= f.text_field :id %>
+    <%= f.label :identifier %><br>
+    <%= f.text_field :identifier %>
   </div>
   <div class="field">
     <%= f.label :title %><br>
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :cycle %><br>
-    <%= f.number_field :cycle %>
+    <%= f.select :cycle, [ 'Jedes Wintersemester','Jedes Sommersemester','Jedes Semester','Nicht regelmäßig' ], :prompt => 'Bitte auswählen' %>
   </div>
   <div class="field">
     <%= f.label :next %><br>
