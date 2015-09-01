@@ -20,6 +20,7 @@ config/secrets.yml
 /.bundle
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 study-administration/vendor/bundle
 
@@ -29,6 +30,9 @@ study-administration/vendor/bundle
 =======
 study-administration/vendor/bundle
 >>>>>>> 7130e5aa2b34ff1134a571e6226e71a4e071498e
+=======
+study-administration/vendor/
+>>>>>>> d62b09217e1b6234e79f306f41a787e393fc09b9
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
