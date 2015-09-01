@@ -15,6 +15,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
@@ -67,4 +68,15 @@ ActiveRecord::Schema.define(version: 20150901092434) do
   end
 
 >>>>>>> 7130e5aa2b34ff1134a571e6226e71a4e071498e
+=======
+ActiveRecord::Schema.define(version: 20150901112010) do
+
+  create_table "blocks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "credits_min"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+>>>>>>> d62b09217e1b6234e79f306f41a787e393fc09b9
 end
