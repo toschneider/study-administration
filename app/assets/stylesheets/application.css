@@ -1,0 +1,158 @@
+/* We are using bootstrap 
+*= require bootstrap_and_overrides
+*/
+
+/*Tag for everything on the page, change font style here for whole page*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*Spawned content should be below navigation bars, change margin here*/
+.content {
+  margin-top: 80px;
+}
+
+/*Contains navigation and login fields, is fixed so that it will stay visible when scrolling*/
+.bar-container {
+    position:fixed;
+    background-color: #444;
+    top: 0;
+    padding: 0;
+    margin-top: 0%;
+    margin-left: -10px;   
+    width: 101%;
+    height: 25px;
+}
+
+/*Position of login fields*/
+.login {
+    position:absolute;
+    top: 0;
+    padding: 0;
+    margin-top: 0%;
+    margin-left: 80%;
+    width: 100%;
+}
+
+/*Style of Login fields list*/
+.login ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+/*Outward appearance of login items concerning everything aside from color*/
+.login li{
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: -4px;
+  width: 10%;
+  text-align: center;
+}
+
+/*Color of login items*/
+.login a {
+  text-decoration: none;
+  color: #088A4B;
+  display: block;
+  transition: .3s background-color;
+}
+
+/*Color of login item background when hovered*/
+.login a:hover {
+  background-color: #005f5f;
+}
+
+/*Position of navigation fields*/
+.nav {
+  position:absolute;
+  top: 0;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/*Style of navigation fields list*/
+.nav ul {
+  list-style: none;
+  list-style-type:none;
+  list-style-image:none;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+}
+
+/*Outward appearance of navigation items concerning everything aside from color*/
+.nav li.topmenu{
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: -4px;
+  width: 10%;
+  text-align: center;
+  /*float:left;*/
+}
+
+/*Color of navigation item background when hovered*/
+.nav a:hover, .topmenu.on a {
+  color:#4C4C4C;
+  background-color:#005f5f !important;
+}
+ 
+ /*Color of active navigation item*/
+.nav a.active {
+  background-color: #0CCD70;
+  color: #444;
+  cursor: pointer;
+}
+
+/*Expands submenu when hovered*/
+.topmenu:hover ul {
+  display:block;  
+  z-index:500;
+}
+
+/* Layout of menu texts */
+.topmenu a {
+  float:left;
+  width:110px;
+  text-align:center;
+  text-decoration: none;
+  color: #088A4B;
+  display: block;
+  transition: .3s background-color;
+}
+
+/* Hide submenus when not hovered*/
+.topmenu ul{
+  display:none;
+}
+
+/* Layout of menu texts*/
+.topmenu a, .submenu a{
+  padding:2px 5px;
+  /*border-collapse:collapse; /*what is this stuff?*/
+  color:#088A4B;
+  font-weight:bold;
+  text-decoration:none;
+  background-color:#444;
+  margin:0;  
+}
+
+/*Layout of submenu texts*/
+.submenu a{
+  font-size:12px;
+  width:110px;
+  position:relative;
+  clear:both; /* special IE6 */
+}
+
+
+
+
