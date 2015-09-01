@@ -1,3 +1,6 @@
+/*We are using bootstrap*/
+*= require bootstrap_and_overrides
+
 /*Tag for everything on the page, change font style here for whole page*/
 body {
   margin: 0;
@@ -18,8 +21,8 @@ body {
     top: 0;
     padding: 0;
     margin-top: 0%;
-    margin-right: 0%;
-    width: 100%;
+    margin-left: -10px;   
+    width: 101%;
     height: 25px;
 }
 
