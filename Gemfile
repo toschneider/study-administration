@@ -38,6 +38,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use simple password authentication
 gem 'sorcery'
 
+# Use CanCanCan
+gem 'cancancan', '~> 1.10'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
