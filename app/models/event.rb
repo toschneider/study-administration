@@ -12,14 +12,17 @@ class Event < ActiveRecord::Base
 
 
 def avg_rating
-  average_rating = 5.0
+  average_rating = 0.0
   count = 0
   ratings.each do |rating| 
-    average_rating += rating.stars
-    count += 1
+    if rating.stars != nil
+      average_rating += rating.stars
+      count += 1
+    end
   end
                 
   if count != 0
+    puts "check"
     (average_rating / count)
   else
     count

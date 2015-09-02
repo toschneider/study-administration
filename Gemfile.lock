@@ -168,10 +168,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-
   ajaxful_rating (>= 3.0.0.beta7)
   bootstrap_form
-
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)

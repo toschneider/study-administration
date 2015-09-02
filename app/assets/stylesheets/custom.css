@@ -6,9 +6,9 @@ li.rating_star {
   padding: 0; 
   width: 25px;
   height: 25px;
-  background: url(/images/star.png) top left;
+  background: url(/assets/star.png) top left;
 } 
 
 li.rating_star.on {
-  background: url(/images/star.png) 0 -25px;
+  background: url(/assets/star.png) 0 -25px;
 } 
