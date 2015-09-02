@@ -172,12 +172,10 @@ body {
   clear:both; /* special IE6 */
 }
 
+/*Logo format in upper left corner*/
 .nav a.logo {
-  /*background-image: url("/app/assets/images/Logo_b.png");*/
   background-image: url(/assets/Logo_b.png);
   background-size: cover;
-  /*padding-left: 50px;*/
-  /*padding-right: 50px;*/
   width: 80%;
   height: 60px;
   background-position: center;

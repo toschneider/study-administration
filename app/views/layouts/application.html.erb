@@ -45,8 +45,7 @@
     <div class="login">
       <ul>     
         <% if current_user %>
-          <!-- <li class="active_user"><a href="/logout">LogIn</a></li> -->
-          <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
+        <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
         <li class="topmenu active_user"><a href="#">Benutzer</a>
           <ul>
             <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
@@ -56,11 +55,7 @@
         </li>
         <% else %>
           <li class="no_user topmenu"><a href="/users/new">SignUp</a></li>
-          <!--alternative way for button-->
-          <!--<%= link_to "Register", new_user_path %> -->
           <li class="no_user topmenu"><a href="/login">LogIn</a></li>
-          <!--alternative way for button-->
-          <!-- <%= link_to "Login", :login %> -->
         <% end %>
         <!-- Unnecessary? Was added by login group -->
         <!-- <div>
@@ -71,7 +66,6 @@
     </div>
     </div>
  </header>
-<!-- added navigation links and flash messages -->
 <div class="content">
 <!-- <center> -->
 <%= yield %>
