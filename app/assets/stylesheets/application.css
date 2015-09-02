@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,7 +14,6 @@
  *= require twitter/bootstrap
  *= require bootstrap_and_overrides
  @import "bootstrap"
-
 
 /*Tag for everything on the page, change font style here for whole page*/
 body {
@@ -214,3 +214,5 @@ body {
 }
 
 }
+
+
