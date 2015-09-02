@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :Name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :credits_min %><br>
+    <%= f.label :Zu_erreichende_Credits %><br>
     <%= f.number_field :credits_min %>
   </div>
-   <div class="field">
-    <%= f.label :event_ids %><br>
+  <div class="field">
+    <%= f.label :Veranstaltungen %><br>
     <%= f.collection_check_boxes :event_ids, Event.all, :id, :title, {selected: @block.event_ids}, {multiple: true} %>
   </div>
   <div class="actions">
