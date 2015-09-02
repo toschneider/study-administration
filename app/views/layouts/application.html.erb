@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>StudyAdministration</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <!--remove if finally decided that not needed -->
   <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
@@ -55,7 +55,7 @@
         </li>
         <% else %>
           <li class="no_user topmenu"><a href="/users/new">SignUp</a></li>
-          <li class="no_user topmenu"><a href="/login">LogIn</a></li>
+          <li class="no_user topmenu text-success"><a href="/login">LogIn</a></li>
         <% end %>
         <!-- Unnecessary? Was added by login group -->
         <!-- <div>
