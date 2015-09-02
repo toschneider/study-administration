@@ -21,18 +21,18 @@ Rails.application.configure do
   #   arguments: '-i -t'
   # }
 
-  # Email settings
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'no-reply@example.com'}
+  config.action_mailer.default_options = {from: 'dbp2015studyproject@gmx.de'}
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'mail.gmx.com',
-    port:                 465,
+    address:              'mail.gmx.net',
+    port:                 25,
+    domain:               'localhost',
     user_name:            'dbp2015studyproject@gmx.de',
     password:             'dbp2015studyproject',
-    authentication:       'plain',
+    authentication:       'login',
     enable_starttls_auto: true  }
 
   # Print deprecation notices to the Rails logger.
