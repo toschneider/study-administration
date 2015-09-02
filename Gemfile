@@ -40,6 +40,10 @@ gem 'sorcery'
 group :production do
   gem 'rails_12factor'
 end
+
+# Use mail for sending email
+gem 'mail'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
