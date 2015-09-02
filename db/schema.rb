@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901112356) do
+ActiveRecord::Schema.define(version: 20150902134630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,23 @@ ActiveRecord::Schema.define(version: 20150901112356) do
     t.integer  "credits_min"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "blocks_courses", force: :cascade do |t|
+    t.integer "block_id"
+    t.integer "course_id"
+  end
+
+  create_table "blocks_events", id: false, force: :cascade do |t|
+    t.integer "block_id"
+    t.integer "event_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "degree"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -39,12 +56,19 @@ ActiveRecord::Schema.define(version: 20150901112356) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "ratings", force: :cascade do |t|
+    t.integer "stars",    default: 0
+    t.integer "event_id"
+    t.integer "user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
