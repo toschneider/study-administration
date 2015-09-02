@@ -14,8 +14,8 @@
 	<!--Bar containing the important navigation items-->
 	<div class="nav">
       <ul>     
-        <li class="topmenu"><a class="active" href="#">Home</a></li>
-        <li class="topmenu"><a href="events">Veranstaltungen</a>
+        <li class="topmenu"><a class="active logo" href="/">Home</a></li>
+        <li class="topmenu"><a href="/events">Veranstaltungen</a>
           <ul>
             <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
             <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
@@ -45,30 +45,37 @@
     <div class="login">
       <ul>     
         <% if current_user %>
-          <li class="login_field"><a href="edit_user_path(current_user.id)">LogIn</a></li>
+          <!-- <li class="active_user"><a href="/logout">LogIn</a></li> -->
           <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
-          <%= link_to "Logout", :logout, method: :post %>
+        <li class="topmenu active_user"><a href="#">Benutzer</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+            <li class="submenu"><%= link_to "Logout", :logout, method: :post %></li>
+          </ul>
+        </li>
         <% else %>
-          <li class="signup"><a href="/users/new">SignUp</a></li>
+          <li class="no_user topmenu"><a href="/users/new">SignUp</a></li>
           <!--alternative way for button-->
           <!--<%= link_to "Register", new_user_path %> -->
-          <li class="login_field"><a href="/login">LogIn</a></li>
+          <li class="no_user topmenu"><a href="/login">LogIn</a></li>
           <!--alternative way for button-->
           <!-- <%= link_to "Login", :login %> -->
         <% end %>
-        <div>
+        <!-- Unnecessary? Was added by login group -->
+        <!-- <div>
           <p id="notice"><%= flash[:notice] %></p>
           <p id="alert"><%= flash[:alert] %></p>
-        </div>
+        </div> -->
       </ul>
     </div>
     </div>
  </header>
 <!-- added navigation links and flash messages -->
 <div class="content">
-<center>
+<!-- <center> -->
 <%= yield %>
-</center>
+<!-- </center> -->
 </div>
 </body>
 </html>
