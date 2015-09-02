@@ -30,6 +30,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
+
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -72,8 +73,8 @@ class UsersController < ApplicationController
       params.require(:user).permit(:email, :crypted_password)
     end
     
-    # UsersController receive form attributes sorcery.
+    # UsersController receive form attributes sorcery
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :role)
     end
 end

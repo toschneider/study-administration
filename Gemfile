@@ -38,7 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use simple password authentication
 gem 'sorcery'
 
-# Use CanCanCan
+# Use CanCanCan - UserRights
 gem 'cancancan', '~> 1.10'
 
 
