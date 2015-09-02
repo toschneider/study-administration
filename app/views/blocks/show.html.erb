@@ -4,12 +4,13 @@
   <strong>Name:</strong>
   <%= @block.name %>
 </p>
-
 <p>
-  <strong>Gesamtects:</strong>
-  <%= @block.gesamtects %>
-  <strong>Credits min:</strong>
+  <strong>Zu erreichende Kredits:</strong>
   <%= @block.credits_min %>
+</p>
+<p>
+  <strong>Veranstaltungen:</strong>
+  <%= @block.events.map { |a| a.title }.join(", ") %>
 </p>
 
 <%= link_to 'Edit', edit_block_path(@block) %> |
