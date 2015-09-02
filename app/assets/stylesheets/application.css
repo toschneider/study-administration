@@ -1,5 +1,7 @@
+
 /*We are using bootstrap*/
 *= require bootstrap_and_overrides
+ */
 
 /*Tag for everything on the page, change font style here for whole page*/
 body {
@@ -12,6 +14,12 @@ body {
 /*Spawned content should be below navigation bars, change margin here*/
 .content {
   margin-top: 80px;
+  margin-left: 12.5%;
+  width: 70%;
+  height: 100%;
+  background: rgba(0, 204, 0, 0.25);
+  border-radius: 15px;
+  padding: 2%;
 }
 
 /*Contains navigation and login fields, is fixed so that it will stay visible when scrolling*/
@@ -44,8 +52,8 @@ body {
 }
  
 /*Outward appearance of login items concerning everything aside from color*/
-.login li{
-  font-size: 1.2em;
+.login li.no_user{
+  font-size: 1vw;
   line-height: 40px;
   height: 40px;
   display: inline-block;
@@ -53,6 +61,19 @@ body {
   width: 10%;
   text-align: center;
 }
+
+/*Outward appearance of login items concerning everything aside from color*/
+.login li.active_user{
+  font-size: 1vw;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: -4px;
+  width: 10%;
+  text-align: center;
+}
+
 
 /*Color of login items*/
 .login a {
@@ -88,14 +109,14 @@ body {
 
 /*Outward appearance of navigation items concerning everything aside from color*/
 .nav li.topmenu{
-  font-size: 1.2em;
+  font-size: 1vw;
   line-height: 40px;
   height: 40px;
   display: inline-block;
   margin-right: -4px;
-  width: 10%;
+  width: 12%;
   text-align: center;
-  /*float:left;*/
+    /*float:left;*/
 }
 
 /*Color of navigation item background when hovered*/
@@ -106,7 +127,7 @@ body {
  
  /*Color of active navigation item*/
 .nav a.active {
-  background-color: #0CCD70;
+  background-color: #088A4B;
   color: #444;
   cursor: pointer;
 }
@@ -120,7 +141,7 @@ body {
 /* Layout of menu texts */
 .topmenu a {
   float:left;
-  width:110px;
+  width:80%;
   text-align:center;
   text-decoration: none;
   color: #088A4B;
@@ -146,12 +167,25 @@ body {
 
 /*Layout of submenu texts*/
 .submenu a{
-  font-size:12px;
-  width:110px;
+  font-size:0.8vw;
+  width:100;
   position:relative;
   clear:both; /* special IE6 */
 }
 
-
-
+/*Logo format in upper left corner*/
+.nav a.logo {
+  background-image: url(/assets/Logo_b.png);
+  background-size: cover;
+  width: 80%;
+  height: 60px;
+  background-position: center;
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  margin-top: -20px;*/
+  float:left;
+  text-indent:-9999px;
+  display: block;
 }
+
+

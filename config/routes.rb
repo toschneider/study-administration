@@ -1,12 +1,13 @@
 # login/logout routes defined
 
+
 Rails.application.routes.draw do
   resources :events
   resources :blocks
   resources :user_sessions
   resources :users
   resources :ratings
-
+  root :to => 'home#home'
 
 
 get 'login' => 'user_sessions#new', :as => :login
@@ -19,8 +20,6 @@ post 'logout' => 'user_sessions#destroy', :as => :logout
 #get 'user_sessions/create'
 
 #get 'user_sessions/destroy'
-
-root to: 'home#home'
 
 
 # ----------------------------------------
