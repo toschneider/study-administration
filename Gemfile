@@ -37,6 +37,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use simple password authentication
 gem 'sorcery'
 
+# Use valid email
+gem 'valid_email'
+
 group :production do
   gem 'rails_12factor'
 end
