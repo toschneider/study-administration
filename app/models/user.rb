@@ -1,7 +1,4 @@
 # validates email and password
-
-require 'valid_email'
-
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
