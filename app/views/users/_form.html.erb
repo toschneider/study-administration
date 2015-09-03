@@ -1,3 +1,4 @@
+<div class="error">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -10,24 +11,26 @@
       </ul>
     </div>
   <% end %>
+  </div>
 
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email, 'Email-Adresse eingeben' %><br>
     <%= f.text_field :email %>
   </div>
  
   <!-- virtual field, that will hold the password before it is encrypted into the database -->
   <div class="field">
-   <%= f.label :password %><br />
+   <%= f.label :password , 'Passwort wählen' %><br />
    <%= f.password_field :password %>
 </div>
 
 <div class="field">
-   <%= f.label :password_confirmation %><br />
+   <%= f.label :password_confirmation, 'Passwort wiederholen'%><br />
    <%= f.password_field :password_confirmation %>
 </div>  
 
  <div class="actions">
-    <%= f.submit %>
+   <%= f.submit "Abschicken", class: "btn btn-success" %>  
+    <!-- <button type="button" class="btn btn-lg btn-success">Success</button> -->
   </div>
 <% end %>
