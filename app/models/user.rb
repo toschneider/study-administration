@@ -1,13 +1,13 @@
-# validates email and password
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
+  # validates email and password
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes["password"] }
   validates :password, confirmation: true, if: -> { new_record? || changes["password"] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes["password"] }
 
   validates :email, presence: true, email: true, uniqueness: true
 
-  ROLES = %i[admin moderator student guest]
+  ROLES = %w[admin moderator student guest]
 
 end
