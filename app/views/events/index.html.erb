@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Events</h1>
+<h1>Veranstaltungen</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Identifier</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Prof</th>
+      <th>Kürzel</th>
+      <th>Titel</th>
+      <th>Beschreibung</th>
+      <th>Professor</th>
       <th>Credits</th>
-      <th>Sws</th>
-      <th>Cycle</th>
+      <th>SWS</th>
+      <th>Zyklus</th>
       <th>Next</th>
-      <th>Exam type</th>
-      <th>Condition</th>
+      <th>Prüfungsart</th>
+      <th>Bedingung</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +23,6 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.id %></td>
         <td><%= event.identifier %></td>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
@@ -31,7 +30,6 @@
         <td><%= event.credits %></td>
         <td><%= event.sws %></td>
         <td><%= event.cycle %></td>
-        <td><%= event.next %></td>
         <td><%= event.exam_type %></td>
         <td><%= event.condition %></td>
         <td><%= link_to 'Show', event %></td>

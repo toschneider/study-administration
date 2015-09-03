@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :events
   resources :blocks
   resources :user_sessions
-  resources :users 
+  resources :users
+  resources :ratings
   root :to => 'home#home'
   resources :pw_forgot
 
