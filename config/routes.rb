@@ -2,6 +2,8 @@
 
 
 Rails.application.routes.draw do
+  get 'pw_forgot/index'
+
   resources :courses
 
   resources :events
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :users 
   root :to => 'home#home'
+  resources :pw_forgot
 
 
 get 'login' => 'user_sessions#new', :as => :login
