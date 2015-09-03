@@ -35,6 +35,7 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
   config.serve_static_files = true
+  config.serve_static_assets = true
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
@@ -76,4 +77,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_options = {from: 'dbp2015studyproject@gmx.de'}
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'mail.gmx.net',
+    port:                 25,
+    domain:               'studmin.herokuapp.com',
+    user_name:            'dbp2015studyproject@gmx.de',
+    password:             'dbp2015studyproject',
+    authentication:       'login',
+    enable_starttls_auto: true  }
 end

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :users 
   resources :password_resets
+  resources :ratings
   root :to => 'home#home'
 
 

@@ -13,7 +13,6 @@
  *= require twitter/bootstrap
  *= require bootstrap_and_overrides
  @import "bootstrap"
-
 /*Tag for everything on the page, change font style here for whole page*/
 body {
   margin: 0;
@@ -190,7 +189,7 @@ body {
 
 /*Logo format in upper left corner*/
 .nav a.logo {
-  background-image: url(/assets/Logo_b.png);
+  background-image: asset-data-url("Logo_b.png");
   background-size: cover;
   width: 80%;
   height: 65px;
@@ -219,7 +218,3 @@ body {
 .wider_btn_group {
   width: 40% !important;
 }
-
-}
-
-
