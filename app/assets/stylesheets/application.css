@@ -190,7 +190,7 @@ body {
 
 /*Logo format in upper left corner*/
 .nav a.logo {
-  background-image: img_url("assets/images/Logo_b.png");
+  background-image: url("Logo_b.png");
   background-size: cover;
   width: 80%;
   height: 65px;
