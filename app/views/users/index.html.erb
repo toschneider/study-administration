@@ -7,19 +7,28 @@
   <thead>
     <tr>
       <th>Email</th>
-      <th colspan="3"></th>
+      <th>Status</th>
+      <th>Actions</th>
     </tr>
+
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
+<<<<<<< HEAD
          <div class="btn-group btn-group-justified">
           <td class="col-sm-1"><%= link_to 'Anzeigen', user , class: 'btn btn-default'%></td>
           <td class="col-sm-1"><%= link_to 'Bearbeiten', edit_user_path(user) , class: 'btn btn-default'%></td>
           <td class="col-sm-2"><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>    
          </div>
+=======
+        <td><%= user.role %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> c386c72ced64d5fa2ce7e778207d798c627a474d
       </tr>
     <% end %>
   </tbody>

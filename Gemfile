@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use simple password authentication
 gem 'sorcery'
 
+
 # Use valid email
 gem 'valid_email'
 
@@ -46,6 +47,10 @@ end
 
 # Use mail for sending email
 gem 'mail'
+
+# Use CanCanCan - UserRights
+gem 'cancancan', '~> 1.10'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
