@@ -1,10 +1,9 @@
 class UserMailer < ApplicationMailer
- default from: 'notifications@example.com'
- 
-  def welcome_email(user)
-    @user = user
-    @url  = 'http://localhost:3000/users/new'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
-  end
+	default from: 'dbp2015studyproject@gmx.de'
 
+	def welcome_email(user)
+		@user = user
+		@url  = 'http:/localhost:3000/login'
+		mail(to: @user.email, subject: 'Willkommen!')
+	end
 end
