@@ -91,7 +91,7 @@ body {
 
 /*Color of login items*/
 .login a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #00CC66 !important;
   display: block;
 }
@@ -99,7 +99,7 @@ body {
 /*Color of login item background when hovered*/
 .login a:hover {
   background-color: #005f5f;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /*Position of navigation fields*/
@@ -130,7 +130,7 @@ body {
   margin-right: -4px;
   width: 12%;
   text-align: center;
-    /*float:left;*/
+  /*float:left;*/
 }
 
 /*Color of navigation item background when hovered*/
@@ -159,7 +159,7 @@ body {
   float:left;
   width:80%;
   text-align:center;
-  text-decoration: none;
+  text-decoration: none !important;
   display: block;
   transition: .3s background-color;
 }
@@ -210,6 +210,14 @@ body {
 .table > tbody > tr > td {
      vertical-align: middle !important;
      font-size: 0.8vw;
+}
+
+.my_button1 {
+  width: 40%;
+}
+
+.wider_btn_group {
+  width: 40% !important;
 }
 
 }
