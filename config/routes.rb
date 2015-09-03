@@ -2,7 +2,7 @@
 
 
 Rails.application.routes.draw do
-  get 'pw_forgot/index'
+  get 'password_resets/index'
 
   resources :courses
 
@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   resources :blocks
   resources :user_sessions
   resources :users 
+  resources :password_resets
   root :to => 'home#home'
-  resources :pw_forgot
 
 
 get 'login' => 'user_sessions#new', :as => :login
