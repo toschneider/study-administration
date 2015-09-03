@@ -3,6 +3,7 @@
 
 <h1>Alle Nutzer</h1>
 
+<!-- new table design for all the users -->
 <table class="table table-striped">
   <thead>
     <tr>
@@ -13,6 +14,7 @@
 
   </thead>
 
+<!-- list email of user and options/buttons to show profil, to change passwort and to delete profile -->
   <tbody>
     <% @users.each do |user| %>
       <tr>
@@ -31,4 +33,5 @@
 
 <br>
 
+<!-- is this important ? or maybe put to the top of the page? -->
 <%= link_to 'Neuer Nutzer', new_user_path, class: 'btn btn-success'%>

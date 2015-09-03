@@ -1,17 +1,23 @@
+
+
+
 <!-- login view  -->
+
+
+
 <%= form_tag user_sessions_path, :method => :post do %>
   <div class="field">
-    <%= label_tag :email %><br />
+    <%= label_tag :email, "Email eingeben" %><br />
     <%= text_field_tag :email %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br />
+    <%= label_tag :password, "Passwort eingeben" %><br />
     <%= password_field_tag :password %>
   </div>
   <div class="actions" >
   <div class="btn-group wider_btn_group">
     <%= submit_tag "Login", class: "btn btn-success my_button1"  %>
-    <%= link_to 'Passwort vergessen?', root_path , class: 'btn btn-warning my_button1'%>
+    <%= link_to 'Passwort vergessen?', '/pw_forgot/index' , class: 'btn btn-warning my_button1'%>
   </div>
   </div>
-<% end %>
+ <% end %>

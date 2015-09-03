@@ -2,7 +2,7 @@
 
 <h1>Studiengänge</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Abschluss</th>
@@ -18,9 +18,11 @@
         <td><%= course.degree %></td>
         <td><%= course.name %></td>
         <td><%= course.blocks.map { |a| a.name }.join("<br>").html_safe %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="btn-group btn-group-justified">
+          <td class="col-sm-1"><%= link_to 'Anzeigen', course , class: 'btn btn-default'%></td>
+          <td class="col-sm-1"><%= link_to 'Bearbeiten', edit_course_path(course) , class: 'btn btn-default'%></td>
+          <td class="col-sm-2"><%= link_to 'Löschen', course, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>
+          </div>
       </tr>
     <% end %>
   </tbody>
