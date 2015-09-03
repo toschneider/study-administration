@@ -8,7 +8,10 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
+  <div class="actions" >
+  <div class="btn-group wider_btn_group">
+    <%= submit_tag "Login", class: "btn btn-success my_button1"  %>
+    <%= link_to 'Passwort vergessen?', '/password_resets/index' , class: 'btn btn-warning my_button1'%>
+  </div>
   </div>
 <% end %>
