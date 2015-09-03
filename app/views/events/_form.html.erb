@@ -1,3 +1,5 @@
+<!-- layout of new event. if problems or wishes. please let design team know -->
+
 <%= form_for(@event) do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
@@ -10,46 +12,76 @@
       </ul>
     </div>
   <% end %>
-
+<table>
+<tbody>
+<tr>
+<td>
   <div class="field">
     <%= f.label :Kürzel %><br>
     <%= f.text_field :identifier %>
   </div>
+  </td>
+  <td>
   <div class="field">
     <%= f.label :Titel %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  </td>
+  </tr>
+  <tr>
+  <td colspan="3">
+  <div class="field text-event">
     <%= f.label :Beschreibung %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, class:"text-event" %>
   </div>
+  </td>
+  </tr>
+  <tr>
+  <td>
   <div class="field">
     <%= f.label :Professor %><br>
     <%= f.text_field :prof %>
   </div>
+  </td>
+  <td>
   <div class="field">
     <%= f.label :Credits %><br>
     <%= f.number_field :credits %>
   </div>
+  </td>
+  <td>
   <div class="field">
     <%= f.label :Semesterwochenstunden %><br>
     <%= f.number_field :sws %>
   </div>
+  </td>
+  </tr>
+  <tr>
+  <td>
   <div class="field">
-
     <%= f.label :cycle %><br>
     <%= f.select :cycle, [ 'Jedes Wintersemester','Jedes Sommersemester','Jedes Semester', 'Jedes zweite Wintersemester', 'Jedes zweite Sommersemester', 'Nicht regelmäßig' ], :prompt => 'Bitte auswählen' %>
   </div>
-
+  </td>
+  <td>
   <div class="field">
     <%= f.label :Prüfungsart %><br>
     <%= f.text_field :exam_type %>
   </div>
+  </td>
+  <tr>
+  <td>
   <div class="field">
     <%= f.label :Bedingung %><br>
     <%= f.text_field :condition %>
   </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
