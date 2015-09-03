@@ -42,15 +42,25 @@
       </ul>
     </div>
     <!--Bar containing the login and signup buttons-->
-    <div class="login">
-      <ul>     
+        <div class="login">
+      <ul>
+        <!-- if else case for signup-login vs loggedin-logout view -->
         <% if current_user %>
         <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
-        <li class="topmenu active_user"><a href="#">Benutzer</a>
+        <!-- change .id to .role when role is updated from other group -->
+        <li class="topmenu active_user"><a href="#"><%= current_user.id %></a>
           <ul>
-            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
-            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          <!-- if else case for different submenues depending on roles -->
+          <!-- change when role is updated from other group -->
+          <% if current_user.id > 2 %>
+            <li class="submenu"><a href="">Unterpunkt Admin 1</a></li>
+            <li class="submenu"><a href="">Unterpunkt Admin 2</a></li>
             <li class="submenu"><%= link_to "Logout", :logout, method: :post %></li>
+           <% else %>
+            <li class="submenu"><a href="">Unterpunkt Benutzer 1</a></li>
+            <li class="submenu"><a href="">Unterpunkt Benutzer 2</a></li>
+            <li class="submenu"><%= link_to "Logout", :logout, method: :post %></li>
+           <% end %>
           </ul>
         </li>
         <% else %>
