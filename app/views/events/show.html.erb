@@ -58,17 +58,29 @@
   <%= @event.condition %>
 </p>
 
-<p>
-  <strong>Average Rating:</strong>
-  <div id="average_rating" style="display:inline;"><%= @event.avg_rating %></div>
-</p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+<p>
 
+  
 
+  <% (1..5).each do |i| %>
+    <%if i <= @event.avg_rating %>
+      <li class="rating_avg" ></li>
+    <% else %>
+      <li class="rating_rest" ></li>
+    <% end %>
+<% end %>
 
+</p>
+<br>
+<p>
 <% form_id = "event_#{@event.id}_rating" %>
+
+
+
+
 <% if logged_in? %> <!-- To avoid throwing an exception if no user is signed in -->
     <% user_id = current_user.id %>
 <% else %>
@@ -84,4 +96,5 @@
 <% (1..5).each do |i| %>
     <li class="rating_star" id="<%= form_id %>_<%= i %>" data-stars="<%= i %>" data-form-id="<%= form_id %>"></li>
 <% end %>
+</p>
 

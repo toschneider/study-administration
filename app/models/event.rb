@@ -15,9 +15,11 @@ def avg_rating
   average_rating = 0.0
   count = 0
   ratings.each do |rating| 
-    if rating.stars != nil
+    if rating.stars != nil 
+      if rating.stars != 0
       average_rating += rating.stars
       count += 1
+      end
     end
   end
                 

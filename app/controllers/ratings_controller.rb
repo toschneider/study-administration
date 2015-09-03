@@ -1,5 +1,6 @@
 class RatingsController < ApplicationController
   def create
+    
     @rating = Rating.new(params[:rating])
     @event = Event.find(params[:rating][:event_id])
 
@@ -16,10 +17,7 @@ class RatingsController < ApplicationController
     @rating = Rating.find(params[:id])
     @event = Event.find(params[:rating][:event_id])
 
-    #@rating.update_attributes(stars: params[:rating][:stars], user_id: params[:rating][:user_id], event_id: params[:rating][:event_id])
     @rating.stars =  params[:rating][:stars]
-    puts @rating.stars
-
     respond_to do |format|
       if @rating.save
         format.json { render :json => { :avg_rating => @event.avg_rating } }
