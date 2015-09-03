@@ -22,4 +22,9 @@ class User < ActiveRecord::Base
 
   ROLES = %i[admin moderator student guest]
 
+
+
+  has_many :ratings
+
+
 end
