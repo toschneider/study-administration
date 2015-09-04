@@ -222,14 +222,20 @@ body {
      font-size: 0.8vw;
 }
 
+/* make column names scalable*/
+.table > thead > tr > th {
+  font-size: 1vw;
+}
+
 /* configure button width */
 .my_button1 {
-  width: 40%;
+  width: 50% !important;
+  display: block !important;
 }
 
 /* configure width of a wider button group*/
 .wider_btn_group {
-  width: 40% !important;
+  width: 100% !important;
 }
 
 /* make event-description cover whole div */
@@ -247,3 +253,17 @@ body {
 .show_edit_del {
   width: 100% !important;
 }
+
+/* change width here for width of whole email,pw,button group*/
+.same_width1 {
+  width: 35% !important;
+}
+
+/* makes content of same_width1 div be filled to that width*/
+.same_width1_input {
+  display: block !important;
+  width: 100% !important;
+  height: 30% !important;
+}
+
+
