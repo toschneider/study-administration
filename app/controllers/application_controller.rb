@@ -11,6 +11,5 @@ def js_logged_in
   end
 end
 
-
-
+ 
 end
