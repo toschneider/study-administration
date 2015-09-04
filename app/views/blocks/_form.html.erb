@@ -14,15 +14,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :Name %><br>
+    <%= f.label :name, 'Name' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :Zu_erreichende_Credits %><br>
+    <%= f.label :credits_min, 'Zu erreichende Credits' %><br>
     <%= f.number_field :credits_min %>
   </div>
   <div class="field">
-    <%= f.label :Veranstaltungen %><br>
+    <%= f.label :event_ids, 'Veranstaltungen' %><br>
     <%= f.collection_check_boxes :event_ids, Event.all, :id, :title, {selected: @block.event_ids}, {multiple: true} %>
   </div>
   <div class="actions">
