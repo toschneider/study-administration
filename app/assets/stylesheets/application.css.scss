@@ -12,13 +12,22 @@
  *= require_tree .
  *= require twitter/bootstrap
  *= require bootstrap_and_overrides
+ @import "bootstrap-sprockets"
  @import "bootstrap"
+
 /*Tag for everything on the page, change font style here for whole page*/
 body {
   margin: 0;
   padding: 0;
   background: rgba(230, 230, 230, 0.25) !important;
   font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+   font-family: 'Glyphicons Halflings'!important;
+   src: asset-data-url('glyphicons-halflings-regular.eot') !important;
+   src: asset-data-url('glyphicons-halflings-regular.woff') format('woff') !important,
+      asset-data-url('glyphicons-halflings-regular.ttf') format('truetype') !important;
 }
 
 /*Spawned content should be below navigation bars, change margin here*/
@@ -202,19 +211,84 @@ body {
   display: block;
 }
 
+/*Color for errror related elements*/
 .error {
   color: red;
 }
 
+/* layout of tables, text vertical-aligned to middle */
 .table > tbody > tr > td {
      vertical-align: middle !important;
      font-size: 0.8vw;
 }
 
-.my_button1 {
-  width: 40%;
+/* make column names scalable*/
+.table > thead > tr > th {
+  font-size: 1vw;
 }
 
+/* configure button width */
+.my_button1 {
+  width: 50% !important;
+  display: block !important;
+}
+
+/* configure width of a wider button group*/
 .wider_btn_group {
+  width: 100% !important;
+}
+
+/* make event-description cover whole div */
+.text-event {
+  width: 100%;
+}
+
+/* make scrollable field for too long texts */
+.overflow_to_scroll {
+  overflow-y: scroll;
+  height: 55px;
+}
+
+/* make 3-tuple of buttons prettier */
+.show_edit_del {
+  width: 100% !important;
+}
+
+/* change width here for width of whole email,pw,button group*/
+.same_width1 {
+  width: 35% !important;
+}
+
+/* makes content of same_width1 div be filled to that width*/
+.same_width1_input {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* change width here for width of whole email,pw,button group*/
+.same_width2 {
+  width: 65% !important;
+  display: table;
+  table-layout: fixed;
+border-collapse: separate;
+}
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in1 {
+  display: block !important;
   width: 40% !important;
 }
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in2 {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in3 {
+  display: block !important;
+  width: 40% !important;
+}
+
+

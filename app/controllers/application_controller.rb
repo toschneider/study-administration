@@ -6,11 +6,15 @@ class ApplicationController < ActionController::Base
 
 def js_logged_in
   if(!logged_in?)
-    flash[:error] = "You must be a signed in to leave a rating!"
+    flash[:error] = "Login erforderlich für Rating!"
     render :js => "window.location = '/login'"
   end
 end
 
-
-
+# proctected sites unauthorized users
+ helper_method :not_authorized
+ def not_authorized(text)
+ 	redirect_to root_path, alert: text
+ end
 end
+
