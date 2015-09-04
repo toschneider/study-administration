@@ -12,7 +12,9 @@
  *= require_tree .
  *= require twitter/bootstrap
  *= require bootstrap_and_overrides
+ @import "bootstrap-sprockets"
  @import "bootstrap"
+
 
 /*Tag for everything on the page, change font style here for whole page*/
 body {
@@ -20,6 +22,13 @@ body {
   padding: 0;
   background: rgba(230, 230, 230, 0.25) !important;
   font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+   font-family: 'Glyphicons Halflings'!important;
+   src: asset-data-url('glyphicons-halflings-regular.eot') !important;
+   src: asset-data-url('glyphicons-halflings-regular.woff') format('woff') !important,
+      asset-data-url('glyphicons-halflings-regular.ttf') format('truetype') !important;
 }
 
 /*Spawned content should be below navigation bars, change margin here*/
@@ -225,5 +234,10 @@ body {
 }
 
 .overflow_to_scroll {
-  overflow: scroll;
+  overflow-y: scroll;
+  height: 55px;
+}
+
+.show_edit_del {
+  width: 100% !important;
 }
