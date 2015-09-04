@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Blöcke</h1>
 
 <table>
@@ -19,8 +17,12 @@
         <td><%= block.credits_min %></td>
         <td><%= block.events.map { |a| a.title }.join("<br>").html_safe %></td>
         <td><%= link_to 'Show', block %></td>
-        <td><%= link_to 'Edit', edit_block_path(block) %></td>
-        <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if can? :edit, @blocks %>
+          <td><%= link_to 'Edit', edit_block_path(block) %></td>
+        <% end%>
+        <% if can? :destroy, @event %>
+          <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end%>
       </tr>
     <% end %>
   </tbody>
