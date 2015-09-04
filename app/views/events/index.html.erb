@@ -33,13 +33,18 @@
         <td><%= event.exam_type %></td>
         <td><%= event.condition %></td>
         <td><%= link_to 'Show', event %></td>
+        <% if can? :edit, Event %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <%end%>
+        <% if can? :destroy, Event %>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if can? :create, Event %>
 <%= link_to 'New Event', new_event_path %>
+<%end%>

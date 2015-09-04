@@ -1,4 +1,4 @@
-<!--list of all users viewable for the admin?-->
+<!--list of all users viewable for admin-->
 <% if can? :manage, @user %>
 <p id="notice"><%= notice %></p>
 
@@ -40,8 +40,8 @@
 
 <%= link_to 'Neuer Nutzer', new_user_path, class: 'btn btn-success'%>
 <% end %>
+
+<!-- not authorized redirected root path-->
 <% if cannot? :manage, @user %>
- <%controller.redirect_to root_path %> 
-
-
+    <%= not_authorized("Keine Rechte um User Übersicht aufzurufen") %> 
 <% end %>
