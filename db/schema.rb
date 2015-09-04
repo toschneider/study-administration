@@ -12,7 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 20150903131202) do
+ActiveRecord::Schema.define(version: 20150904072744) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -60,11 +60,18 @@ ActiveRecord::Schema.define(version: 20150903131202) do
   create_table "profiles", force: :cascade do |t|
     t.string   "family_name"
     t.string   "name"
+<<<<<<< HEAD
+=======
     t.string   "email"
+>>>>>>> 53b0c3cf1ac44a0bc0eb3fbdaa54e35bcbf6086a
     t.date     "birth_date"
     t.text     "bio"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+<<<<<<< HEAD
+    t.integer  "user_id"
+=======
+>>>>>>> 53b0c3cf1ac44a0bc0eb3fbdaa54e35bcbf6086a
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -74,9 +81,13 @@ ActiveRecord::Schema.define(version: 20150903131202) do
   end
 
   create_table "users", force: :cascade do |t|
+<<<<<<< HEAD
+    t.string   "email",                                               null: false
+=======
 
     t.string   "email",                           null: false
 
+>>>>>>> 53b0c3cf1ac44a0bc0eb3fbdaa54e35bcbf6086a
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"
@@ -85,8 +96,11 @@ ActiveRecord::Schema.define(version: 20150903131202) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
+<<<<<<< HEAD
+=======
     t.integer  "profile_id"
 
+>>>>>>> 53b0c3cf1ac44a0bc0eb3fbdaa54e35bcbf6086a
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
