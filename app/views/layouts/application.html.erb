@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudyAdministration</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <!--remove if finally decided that not needed -->
+  <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body>
+<header>
+	<div class="bar-container">
+	<!--Bar containing the important navigation items-->
+	<div class="nav">
+      <ul>     
+        <li class="topmenu"><a class="active logo" href="/">Home</a></li>
+        <li class="topmenu"><a href="/events">Veranstaltungen</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-2</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-3</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="#">menue-4</a>
+          <ul>
+            <li class="submenu"><a href="">Unterpunkt 1.1</a></li>
+            <li class="submenu"><a href="">Unterpunkt 1.2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--Bar containing the login and signup buttons-->
+        <div class="login">
+      <ul>
+        <!-- if else case for signup-login vs loggedin-logout view -->
+        <% if current_user %>
+        <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
+        <!-- change .id to .role when role is updated from other group -->
+        <li class="topmenu active_user"><a href="#"><%= current_user.id %></a>
+          <ul>
+          <!-- if else case for different submenues depending on roles -->
+          <!-- change when role is updated from other group -->
+          <% if current_user.id > 2 %>
+            <li class="submenu"><a href="">Unterpunkt Admin 1</a></li>
+            <li class="submenu"><a href="">Unterpunkt Admin 2</a></li>
+            <li class="submenu"><%= link_to "Logout", :logout, method: :post %></li>
+           <% else %>
+            <li class="submenu"><a href="">Unterpunkt Benutzer 1</a></li>
+            <li class="submenu"><a href="">Unterpunkt Benutzer 2</a></li>
+            <li class="submenu"><%= link_to "Logout", :logout, method: :post %></li>
+           <% end %>
+          </ul>
+        </li>
+        <% else %>
+          <li class="no_user topmenu"><a href="/users/new">SignUp</a></li>
+          <li class="no_user topmenu text-success"><a href="/login">LogIn</a></li>
+        <% end %>
+        <!-- Unnecessary? Was added by login group -->
+        <!-- <div>
+          <p id="notice"><%= flash[:notice] %></p>
+          <p id="alert"><%= flash[:alert] %></p>
+        </div> -->
+      </ul>
+    </div>
+    </div>
+ </header>
+<div class="content">
+<!-- <center> -->
+<%= yield %>
+<!-- </center> -->
+</div>
+</body>
+</html>

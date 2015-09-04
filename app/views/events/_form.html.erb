@@ -1,0 +1,55 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Kürzel %><br>
+    <%= f.text_field :identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :Titel %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Beschreibung %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :Professor %><br>
+    <%= f.text_field :prof %>
+  </div>
+  <div class="field">
+    <%= f.label :Credits %><br>
+    <%= f.number_field :credits %>
+  </div>
+  <div class="field">
+    <%= f.label :Semesterwochenstunden %><br>
+    <%= f.number_field :sws %>
+  </div>
+  <div class="field">
+
+    <%= f.label :cycle %><br>
+    <%= f.select :cycle, [ 'Jedes Wintersemester','Jedes Sommersemester','Jedes Semester', 'Jedes zweite Wintersemester', 'Jedes zweite Sommersemester', 'Nicht regelmäßig' ], :prompt => 'Bitte auswählen' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Prüfungsart %><br>
+    <%= f.text_field :exam_type %>
+  </div>
+  <div class="field">
+    <%= f.label :Bedingung %><br>
+    <%= f.text_field :condition %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

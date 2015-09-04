@@ -1,0 +1,31 @@
+<div class="error">
+<%= form_for(@block) do |f| %>
+  <% if @block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@block.errors.count, "error") %> prohibited this block from being saved:</h2>
+
+      <ul>
+      <% @block.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Zu_erreichende_Credits %><br>
+    <%= f.number_field :credits_min %>
+  </div>
+  <div class="field">
+    <%= f.label :Veranstaltungen %><br>
+    <%= f.collection_check_boxes :event_ids, Event.all, :id, :title, {selected: @block.event_ids}, {multiple: true} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
