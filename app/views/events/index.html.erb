@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <% @events.each do |event| %>
+    <% @events.order("title").each do |event| %>
       <tr>
         <td><%= event.identifier %></td>
         <td><%= event.title %></td>
