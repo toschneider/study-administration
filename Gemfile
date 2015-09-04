@@ -4,6 +4,8 @@ ruby "2.2.2"
 # Bootstrap gem for better looking css
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
