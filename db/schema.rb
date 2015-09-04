@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150904105600) do
-
+ActiveRecord::Schema.define(version: 20150904112855) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -58,6 +56,11 @@ ActiveRecord::Schema.define(version: 20150904105600) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string   "family_name"
     t.string   "name"
@@ -81,7 +84,7 @@ ActiveRecord::Schema.define(version: 20150904105600) do
 
   create_table "users", force: :cascade do |t|
 
-    t.string   "email",                           null: false
+    t.string   "email",                                               null: false
 
     t.string   "crypted_password"
     t.string   "salt"
@@ -93,16 +96,13 @@ ActiveRecord::Schema.define(version: 20150904105600) do
     t.datetime "reset_password_email_sent_at"
 
 
+
     t.integer  "profile_id"
+
 
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
-
-  create_table "users_events", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "event_id"
-  end
 
 end

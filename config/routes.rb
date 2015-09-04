@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :profiles
 
   get 'password_resets/index'
-
+  post 'events/mark_event'
 
   resources :courses
 
@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   root :to => 'home#home'
 
 
-get 'login' => 'user_sessions#new', :as => :login
-post 'logout' => 'user_sessions#destroy', :as => :logout
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
 
 
 
