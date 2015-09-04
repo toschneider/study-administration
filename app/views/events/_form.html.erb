@@ -1,88 +1,64 @@
 <!-- layout of new event. if problems or wishes. please let design team know -->
 
 <%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<div class="same_width2">
 
-      <ul>
-      <% @event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<table>
-<tbody>
-<tr>
-<td>
   <div class="field">
     <%= f.label :identifier, 'Kürzel' %><br>
-    <%= f.text_field :identifier %>
+    <%= f.text_field :identifier, class: "same_width2_in3" %>
   </div>
-  </td>
-  <td>
+
   <div class="field">
     <%= f.label :title, 'Titel' %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "same_width2_in2"%>
   </div>
-  </td>
-  </tr>
-  
-  <tr>
-  <td colspan="3">
+
   <div class="field text-event">
     <%= f.label :Beschreibung %><br>
-    <%= f.text_area :description, class:"text-event" %>
+    <%= f.text_area :description, class: "text-event same_width2_in2" %>
   </div>
-  </td>
-  </tr>
-  <tr>
-  <td>
+
   <div class="field">
     <%= f.label :prof, 'Professor' %><br>
-    <%= f.text_field :prof %>
+    <%= f.text_field :prof, class: "same_width2_in2" %>
   </div>
-  </td>
+
+  <table>
+  <tr>
   <td>
   <div class="field">
     <%= f.label :credits, 'Credits' %><br>
-    <%= f.number_field :credits %>
+    <%= f.number_field :credits , class: "same_width2_in1"%>
   </div>
   </td>
   <td>
   <div class="field">
     <%= f.label :sws, 'SWS' %><br>
-    <%= f.number_field :sws %>
+    <%= f.number_field :sws ,class: "same_width2_in1"%>
   </div>
   </td>
-  </tr>
-  <tr>
   <td>
   <div class="field">
     <%= f.label :cycle %><br>
-    <%= f.select :cycle, [ 'Jedes Wintersemester','Jedes Sommersemester','Jedes Semester', 'Jedes zweite Wintersemester', 'Jedes zweite Sommersemester', 'Nicht regelmäßig' ], :prompt => 'Bitte auswählen' %>
-  </div>
-  </td>
-  <td>
-  <div class="field">
-    <%= f.label :exam_type, 'Prüfungsart' %><br>
-    <%= f.text_field :exam_type %>
-  </div>
-  </td>
-  <tr>
-  <td>
-  <div class="field">
-    <%= f.label :condition, 'Bedingung' %><br>
-    <%= f.text_field :condition %>
+    <%= f.select :cycle, [ 'Jedes Wintersemester','Jedes Sommersemester','Jedes Semester', 'Jedes zweite Wintersemester', 'Jedes zweite Sommersemester', 'Nicht regelmäßig' ], :prompt => 'Bitte auswählen',class: "same_width2_in1" %>
   </div>
   </td>
   </tr>
-  </tbody>
   </table>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="field">
+    <%= f.label :exam_type, 'Prüfungsart' %><br>
+    <%= f.text_field :exam_type, class: "same_width2_in2" %>
   </div>
 
+  <div class="field">
+    <%= f.label :condition, 'Bedingung' %><br>
+    <%= f.text_field :condition, class: "same_width2_in2" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Abschicken", class: "btn btn-success" %>
+  </div>
+</div>
 
 <% end %>

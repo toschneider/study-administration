@@ -263,7 +263,32 @@ body {
 .same_width1_input {
   display: block !important;
   width: 100% !important;
-  height: 30% !important;
+}
+
+/* change width here for width of whole email,pw,button group*/
+.same_width2 {
+  width: 65% !important;
+  display: table;
+  table-layout: fixed;
+border-collapse: separate;
+}
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in1 {
+  display: block !important;
+  width: 40% !important;
+}
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in2 {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* makes content of same_width2 div be filled to that width*/
+.same_width2_in3 {
+  display: block !important;
+  width: 40% !important;
 }
 
 
