@@ -19,5 +19,5 @@ class User < ActiveRecord::Base
 
 
   has_many :ratings
-  has_one :profile
+  has_one :profile, dependent: :destroy
 end
