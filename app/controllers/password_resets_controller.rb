@@ -12,7 +12,7 @@ class PasswordResetsController < ApplicationController
     end
 
     # This line sends an email to the user with instructions on how to reset their password (a url with a random token)
-    puts @user.deliver_reset_password_instructions! if @user
+    @user.deliver_reset_password_instructions! if @user
 
     redirect_to(root_path, :notice => 'Eine Mail mit Anweisungen wurde ihnen zugeschickt.')
   end
