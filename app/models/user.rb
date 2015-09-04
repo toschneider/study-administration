@@ -14,7 +14,10 @@ class User < ActiveRecord::Base
 
 
 
+
+  after_create :create_profile
+
+
   has_many :ratings
-
-
+  has_one :profile
 end
