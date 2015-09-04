@@ -2,12 +2,15 @@
 
 
 Rails.application.routes.draw do
+  get 'password_resets/index'
+
   resources :courses
 
   resources :events
   resources :blocks
   resources :user_sessions
-  resources :users
+  resources :users 
+  resources :password_resets
   resources :ratings
   root :to => 'home#home'
 

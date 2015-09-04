@@ -1,31 +1,50 @@
+   <%= stylesheet_link_tag "courseOverview.css" %>
+
+<!--- neu -->
 <p id="notice"><%= notice %></p>
 
-<h1>Studiengänge</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Abschluss</th>
-      <th>Studiengang</th>
-      <th>Blöcke</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<ol class = "tree">
+  <li>
+    <!-- Ebene 1: Courses -->
+    <label for="Studiengaenge">Studiengaenge</label>
+    <input type="checkbox" id="Studiengaenge" />
+      <ol>
+      <% @courses.each do |course| %>
+        <li>  
+          <label for="course"><%=    link_to course.name,  course %> <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %> </label>
+          <input type="checkbox"  id="Bloecke" />
+        
+            <ol>
+              <!-- Ebene 2: Blocks -->
 
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.degree %></td>
-        <td><%= course.name %></td>
-        <td><%= course.blocks.map { |a| a.name }.join("<br>").html_safe %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <% e = course.blocks.map %>
+              
+                
+              <% e.each do |blocks| %>
+              <li>
+                    <label for="blocks"><%= link_to blocks.name, blocks %></label>
+                    <input type="checkbox"  id="Bloecke" />
 
-<br>
+                    <ol>
+                        <% f = blocks.events.map %>
+                        <% f.each do |events| %>
+                          <li class="file">
+                                <%= link_to events.title, events %>
+                                <input type="checkbox"  id="Events" />
+                          </li>
+                        <% end %>
+
+                    </ol>
+              
+              </li>
+              <% end %>
+            </ol>
+        </li>
+      
+      <% end %>
+    </ol>
+  </li>
+</ol>
 
 <%= link_to 'New Course', new_course_path %>
