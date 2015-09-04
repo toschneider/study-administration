@@ -16,13 +16,14 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr> 
         <td><%= user.email %></td>
         <td><%= user.role %></td>
          <div class="btn-group btn-group-justified">
           <td class="col-sm-1"><%= link_to 'Anzeigen', user , class: 'btn btn-default'%></td>
           
           <td class="col-sm-1"><%= link_to 'Bearbeiten', edit_user_path(user) , class: 'btn btn-default'%></td>
+<<<<<<< HEAD
           
           <td class="col-sm-2">
           
@@ -30,6 +31,9 @@
           
           </td>    
 
+=======
+          <td class="col-sm-2"><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>   
+>>>>>>> c2fd285063c25914992678102f63bd783c8ccbcc
          </div>
       </tr>
     <% end %>
