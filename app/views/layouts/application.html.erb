@@ -48,7 +48,7 @@
         <% if current_user %>
         <!--<%= link_to "Edit Profile", edit_user_path(current_user.id) %>-->
         <!-- change .id to .role when role is updated from other group -->
-        <li class="topmenu active_user"><a href="#"><%= current_user.id %></a>
+        <li class="topmenu active_user"><a href="#"><%= current_user.role %></a>
           <ul>
           <!-- if else case for different submenues depending on roles -->
           <!-- change when role is updated from other group -->
