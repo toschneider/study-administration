@@ -2,7 +2,11 @@
 
 
 Rails.application.routes.draw do
+
+  resources :profiles
+
   get 'password_resets/index'
+
 
   resources :courses
 
