@@ -15,6 +15,7 @@
 ActiveRecord::Schema.define(version: 20150904105600) do
 
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150904105600) do
   create_table "profiles", force: :cascade do |t|
     t.string   "family_name"
     t.string   "name"
+
     t.string   "email"
 
     t.date     "birth_date"
@@ -67,9 +69,7 @@ ActiveRecord::Schema.define(version: 20150904105600) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
 
-
     t.integer  "user_id"
-
 
   end
 
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20150904105600) do
 
   create_table "users", force: :cascade do |t|
 
-
     t.string   "email",                           null: false
 
     t.string   "crypted_password"
@@ -92,6 +91,7 @@ ActiveRecord::Schema.define(version: 20150904105600) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
+
 
     t.integer  "profile_id"
 
