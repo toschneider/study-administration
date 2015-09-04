@@ -78,6 +78,6 @@ class UsersController < ApplicationController
     
     # UsersController receive form attributes sorcery
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :role, :profile_id)
+      params.require(:user).permit(:email, :password, :password_confirmation, :role)
     end
 end
