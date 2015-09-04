@@ -1,19 +1,17 @@
 <h1>Veranstaltungen</h1>
 
-<table>
+<table class = "table table-striped" style=" table-layout: fixed; width: 100%;">
   <thead>
     <tr>
       <th>Kürzel</th>
       <th>Titel</th>
-      <th>Beschreibung</th>
       <th>Professor</th>
       <th>Credits</th>
       <th>SWS</th>
       <th>Zyklus</th>
       <th>Prüfungsart</th>
       <th>Bedingung</th>
-
-      <th colspan="3"></th>
+      <th width="300"></th>
     </tr>
   </thead>
 
@@ -22,13 +20,13 @@
       <tr>
         <td><%= event.identifier %></td>
         <td><%= event.title %></td>
-        <td><%= event.description %></td>
         <td><%= event.prof %></td>
         <td><%= event.credits %></td>
         <td><%= event.sws %></td>
         <td><%= event.cycle %></td>
         <td><%= event.exam_type %></td>
         <td><%= event.condition %></td>
+<<<<<<< HEAD
         <td><%= link_to 'Show', event %></td>
         <% if can? :edit, @event %>
             <td><%= link_to 'Edit', edit_event_path(event) %></td>
@@ -36,6 +34,22 @@
         <% if can? :destroy, @event %>
             <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>
+=======
+        <td>
+        <div class="btn-group btn-group-justified show_edit_del">
+          <%= link_to 'Anzeigen', event , class: 'btn btn-default'%>
+          <%= link_to 'Bearbeiten', edit_event_path(event) , class: 'btn btn-default'%>
+          <%= link_to 'Löschen', event, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%> 
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="9">
+        <div class="overflow_to_scroll">
+          <%= event.description %>
+        </div>
+        </td>
+>>>>>>> d7f941b09410d801976193a464091b50368b37e8
       </tr>
     <% end %>
   </tbody>

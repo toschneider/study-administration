@@ -1,6 +1,7 @@
 <h1>Blöcke</h1>
 
-<table>
+<!-- changed layout of table -->
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -10,19 +11,22 @@
     </tr>
   </thead>
 
+<!-- changed links to buttons -->
   <tbody>
     <% @blocks.each do |block| %>
       <tr>
         <td><%= block.name %></td>
         <td><%= block.credits_min %></td>
         <td><%= block.events.map { |a| a.title }.join("<br>").html_safe %></td>
-        <td><%= link_to 'Show', block %></td>
-        <% if can? :edit, @blocks %>
-          <td><%= link_to 'Edit', edit_block_path(block) %></td>
-        <% end%>
-        <% if can? :destroy, @event %>
-          <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end%>
+        <div class="btn-group btn-group-justified">
+          <td class="col-sm-1"><%= link_to 'Anzeigen', block , class: 'btn btn-default'%></td>
+          <% if can? :edit, @blocks %>
+          <td class="col-sm-1"><%= link_to 'Bearbeiten', edit_block_path(block) , class: 'btn btn-default'%></td>
+          <% end%>
+          <% if can? :destroy, @event %>
+          <td class="col-sm-2"><%= link_to 'Löschen', block, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>
+          <% end%>
+          </div>
       </tr>
     <% end %>
   </tbody>

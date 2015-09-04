@@ -8,7 +8,8 @@ class Ability
      user ||= User.new # guest user (not logged in)
         if user.role=="admin"
          can :manage, :all 
-        elsif  user.role=="student"
+        elsif user.role=="student"
+         can :create, User
          can :read, :all
          can :destroy, User, :user_id => user.id
         else
