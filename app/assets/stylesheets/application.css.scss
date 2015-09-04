@@ -13,7 +13,6 @@
  *= require twitter/bootstrap
  *= require bootstrap_and_overrides
  @import "bootstrap"
-
 /*Tag for everything on the page, change font style here for whole page*/
 body {
   margin: 0;
@@ -212,6 +211,10 @@ body {
      font-size: 0.8vw;
 }
 
+.my_button1 {
+  width: 40%;
+}
 
-
-
+.wider_btn_group {
+  width: 40% !important;
+}
