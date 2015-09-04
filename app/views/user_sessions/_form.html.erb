@@ -6,13 +6,15 @@
 
 
 <%= form_tag user_sessions_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email, "Email eingeben" %><br />
-    <%= text_field_tag :email %>
+    <div class="field">
+      <%= label_tag :email, "Email eingeben", class: "wider_btn_group" %><br />
+      <%= text_field_tag :email %>
   </div>
   <div class="field">
+  <div class="wider_btn_group">
     <%= label_tag :password, "Passwort eingeben" %><br />
     <%= password_field_tag :password %>
+  </div>
   </div>
   <div class="actions" >
   <div class="btn-group wider_btn_group">
