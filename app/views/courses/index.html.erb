@@ -12,16 +12,33 @@
       <ol>
       <% @courses.each do |course| %>
         <li>  
-          <label for="course"><%=    link_to course.name,  course %></label>
+          <label for="course"><%=    link_to course.name,  course %> <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %> </label>
           <input type="checkbox"  id="Bloecke" />
         
             <ol>
               <!-- Ebene 2: Blocks -->
-              <li class="file"><%= course.blocks.map { |a| a.name 
 
-                 link_to a.name, a 
+              <% e = course.blocks.map %>
+              
+                
+              <% e.each do |blocks| %>
+              <li>
+                    <label for="blocks"><%= link_to blocks.name, blocks %></label>
+                    <input type="checkbox"  id="Bloecke" />
 
-                }.join("<br>").html_safe %></li>
+                    <ol>
+                        <% f = blocks.events.map %>
+                        <% f.each do |events| %>
+                          <li class="file">
+                                <%= link_to events.title, events %>
+                                <input type="checkbox"  id="Events" />
+                          </li>
+                        <% end %>
+
+                    </ol>
+              
+              </li>
+              <% end %>
             </ol>
         </li>
       
