@@ -49,9 +49,28 @@
 </p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
 <p>
+
+<!-- if logged in, show the Button to mark an event-->
+<% if logged_in? %>
+  <% unless @event.users.find_by(id: current_user.id) %>
+    <p>
+      <%= button_to "Veranstaltung vormerken", :action => "mark_event", :id => @id%>
+    </p>
+  <% else %>
+
+  <p>
+  <strong>Die Veranstaltung
+  <%= @event.title %>
+    ist vorgemerkt digger!</strong>
+</p>
+
+
+    <%end %>
+
+<% end %>
+
+
 
   
  <!-- Displays the single stars for Average Rating -->
@@ -65,6 +84,7 @@
 
 </p>
 <br>
+
 
  <!-- if the user is logged in, he can see the stars to click.  -->
 <p>
@@ -86,4 +106,7 @@
     <% end %>  
 <% end %>
 </p>
-
+<br>
+<br>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

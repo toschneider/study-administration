@@ -7,9 +7,20 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def mark_event
+    event = Event.find(params[:id])
+    unless current_user.nil?
+      event.users << current_user
+      redirect_to event_path(event), notice: "Veranstaltung vorgemerkt"
+    else
+      redirect_to event_path(event), alert: "Nicht eingeloggt"
+    end
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
+    @id = params[:id]
   end
 
   # GET /events/new
