@@ -1,3 +1,4 @@
+
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   
@@ -11,9 +12,11 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, email: true, uniqueness: true
 
-  ROLES = %i[admin moderator student guest]
+
+
 
   after_create :create_profile
+
 
   has_many :ratings
   has_one :profile
