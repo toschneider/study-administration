@@ -95,7 +95,6 @@ ActiveRecord::Schema.define(version: 20150904105600) do
 
     t.integer  "profile_id"
 
-
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
