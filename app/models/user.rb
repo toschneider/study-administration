@@ -14,10 +14,12 @@ class User < ActiveRecord::Base
   after_create :create_profile
 
   has_many :ratings
-  has_one :profile
+
+  
  
   has_many :events_users
   has_many :events, through: :events_users
 
 
+  has_one :profile, dependent: :destroy
 end
