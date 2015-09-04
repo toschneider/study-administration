@@ -48,8 +48,9 @@
   <%= @event.condition %>
 </p>
 
-
+<% if can? :edit, Event %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
+<%end%>
 <%= link_to 'Back', events_path %>
 <p>
 

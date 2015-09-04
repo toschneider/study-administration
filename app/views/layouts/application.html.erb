@@ -67,17 +67,17 @@
           <li class="no_user topmenu"><a href="/users/new">SignUp</a></li>
           <li class="no_user topmenu text-success"><a href="/login">LogIn</a></li>
         <% end %>
-        <!-- Unnecessary? Was added by login group -->
-        <!-- <div>
-          <p id="notice"><%= flash[:notice] %></p>
-          <p id="alert"><%= flash[:alert] %></p>
-        </div> -->
+        
       </ul>
     </div>
     </div>
  </header>
 <div class="content">
-<!-- <center> -->
+<!-- allows alerts and notice -->
+<div>
+  <p id="notice"><%= flash[:notice] %></p>
+  <p id="alert"><%= flash[:alert] %></p>
+</div> 
 <%= yield %>
 <!-- </center> -->
 </div>

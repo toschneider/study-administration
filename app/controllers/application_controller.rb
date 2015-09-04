@@ -11,6 +11,10 @@ def js_logged_in
   end
 end
 
-
-
+# proctected sites unauthorized users
+ helper_method :not_authorized
+ def not_authorized(text)
+ 	redirect_to root_path, alert: text
+ end
 end
+
