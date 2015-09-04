@@ -1,4 +1,3 @@
-
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   
@@ -12,11 +11,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, email: true, uniqueness: true
 
-
-
-
   after_create :create_profile
-
 
   has_many :ratings
   has_one :profile
