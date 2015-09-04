@@ -212,32 +212,39 @@ body {
   display: block;
 }
 
+/*Color for errror related elements*/
 .error {
   color: red;
 }
 
+/* layout of tables, text vertical-aligned to middle */
 .table > tbody > tr > td {
      vertical-align: middle !important;
      font-size: 0.8vw;
 }
 
+/* configure button width */
 .my_button1 {
   width: 40%;
 }
 
+/* configure width of a wider button group*/
 .wider_btn_group {
   width: 40% !important;
 }
 
+/* make event-description cover whole div */
 .text-event {
   width: 100%;
 }
 
+/* make scrollable field for too long texts */
 .overflow_to_scroll {
   overflow-y: scroll;
   height: 55px;
 }
 
+/* make 3-tuple of buttons prettier */
 .show_edit_del {
   width: 100% !important;
 }
