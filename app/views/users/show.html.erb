@@ -8,5 +8,15 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <strong>Passwort:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<%= link_to 'Bearbeiten', edit_user_path(@user) %> |
+<%= link_to 'Zurück', users_path %>
