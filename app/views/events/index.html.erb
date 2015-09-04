@@ -26,20 +26,15 @@
         <td><%= event.cycle %></td>
         <td><%= event.exam_type %></td>
         <td><%= event.condition %></td>
-<<<<<<< HEAD
-        <td><%= link_to 'Show', event %></td>
-        <% if can? :edit, @event %>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <%end%>
-        <% if can? :destroy, @event %>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%end%>
-=======
         <td>
         <div class="btn-group btn-group-justified show_edit_del">
           <%= link_to 'Anzeigen', event , class: 'btn btn-default'%>
+         <% if can? :edit, @event %>
           <%= link_to 'Bearbeiten', edit_event_path(event) , class: 'btn btn-default'%>
+          <%end%>
+          <% if can? :destroy, @event %>
           <%= link_to 'Löschen', event, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%> 
+          <%end%>
         </div>
         </td>
       </tr>
@@ -49,7 +44,6 @@
           <%= event.description %>
         </div>
         </td>
->>>>>>> d7f941b09410d801976193a464091b50368b37e8
       </tr>
     <% end %>
   </tbody>
