@@ -12,6 +12,13 @@ class User < ActiveRecord::Base
   validates :email, presence: true, email: true, uniqueness: true
   
   has_many :ratings
+
+  
+ 
+  has_many :events_users
+  has_many :events, through: :events_users
+
+
   has_one :profile, dependent: :destroy
   belongs_to :course
 
