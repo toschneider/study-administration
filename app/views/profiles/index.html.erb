@@ -1,7 +1,7 @@
-<%= not_authorized("Profiles ist unzugänglich") %>
+<!-- <%= not_authorized("Profiles ist unzugänglich") %>-->
 
 
-<!-- <h1>Profile</h1>
+<h1>Profile</h1>
 
 <table class = "table table-striped">
   <thead>
@@ -35,4 +35,12 @@
 
 <br>
 
-<%= link_to 'New Profile', new_profile_path %> -->
+<%= link_to 'New Profile', new_profile_path %> 
+
+
+
+<td class="col-sm-1"><%= link_to 'Bearbeiten', edit_user_path(user) , class: 'btn btn-default'%></td>
+<% if can? :manage, @user %>
+<td class="col-sm-2"><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>   
+
+<%end %>
