@@ -3,7 +3,10 @@ class Event < ActiveRecord::Base
 
 	has_many :ratings
   has_and_belongs_to_many :blocks
-  
+
+  has_many  :events_users
+  has_many :users, through: :events_users
+
 	validates_inclusion_of :cycle, :in => ['Jedes Wintersemester', 'Jedes Sommersemester', 'Jedes Semester', 'Jedes zweite Wintersemester', 'Jedes zweite Sommersemester', 'Nicht regelmäßig']
 	validates_inclusion_of :credits, :in => 0..20
 	validates_inclusion_of :sws, :in => 0..20
