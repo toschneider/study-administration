@@ -20,11 +20,9 @@
         <td><%= user.email %></td>
         <td><%= user.role %></td>
          <div class="btn-group btn-group-justified">
-          <td class="col-sm-1"><%= link_to 'Anzeigen', user , class: 'btn btn-default'%></td>
-          
-          <td class="col-sm-1"><%= link_to 'Bearbeiten', edit_user_path(user) , class: 'btn btn-default'%></td>
-      
-          <td class="col-sm-2"><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Sicher?' } , class: 'btn btn-default'%></td>   
+         <% unless user.profile.nil?%>
+          <td class="col-sm-1"><%= link_to 'Anzeigen', profile_path(user.profile) , class: 'btn btn-default'%></td>
+        <%end%>
 
          </div>
       </tr>
