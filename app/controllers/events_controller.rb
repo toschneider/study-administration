@@ -7,6 +7,8 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+#User is able to mark a event, he wants to join. 
+#if the user is logged in he can mark a event through the show-view.
   def mark_event
     event = Event.find(params[:id])
     unless current_user.nil?
