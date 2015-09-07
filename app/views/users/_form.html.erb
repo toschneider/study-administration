@@ -9,14 +9,20 @@
 
     <div class="field">
       <%= builder.label :name, 'Vorname' %>
-      <%= builder.text_field :name %>
+      <%= builder.text_field :name, class: "same_width1_input" %>
     </div>
 
     <div class="field">
       <%= builder.label :family_name, 'Name' %>
-      <%= builder.text_field :family_name %>
+      <%= builder.text_field :family_name, class: "same_width1_input" %>
     </div>
   <% end %>
+
+  <div class="field">
+   <%= f.label :course , 'Studiengang wählen' %><br />
+   <%= f.collection_select :course_id, Course.order(:name), :id, :name, class: "same_width1_input" %>
+  </div>
+
 
   <!-- virtual field, that will hold the password before it is encrypted into the database -->
   <div class="field">

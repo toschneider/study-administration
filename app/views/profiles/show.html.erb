@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <strong>E-Mail:</strong>
+  <%= @profile.user.email %>
+</p>
+
+<p>
+  <strong>Studiengang:</strong>
+  <%= @profile.user.course.name %>
+</p>
+
+<p>
   <strong>Geburtsdatum:</strong>
   <%= @profile.birth_date %>
 </p>
@@ -19,6 +29,7 @@
   <strong>Über mich:</strong>
   <%= @profile.bio %>
 </p>
+
 
 
 

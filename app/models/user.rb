@@ -11,10 +11,9 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, email: true, uniqueness: true
   
-
-
   has_many :ratings
   has_one :profile, dependent: :destroy
+  belongs_to :course
 
   accepts_nested_attributes_for :profile
 
